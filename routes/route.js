@@ -32,7 +32,7 @@ router.post("/createDetails", authentication, CreateDetails);
  * @desc    Update account
  * @access  Public
  */
-router.post("/updateDetails/:accountId", authentication, autherisation, updateDetails);
+router.put("/updateDetails/:accountId", authentication, autherisation, updateDetails);
 
 /**
  * @route   get api/account
