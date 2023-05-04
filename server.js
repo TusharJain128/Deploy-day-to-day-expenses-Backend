@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require('dotenv')
-const accountsRoute = require("./routes/api/account")
-const userRoute = require("./routes/api/user")
+const route = require("./routes/route")
 const cors = require('cors');
 
 const app = express();
@@ -20,8 +19,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/accounts", accountsRoute)
-app.use("/api/user", userRoute)
+app.use("/", route)
 
 app.listen(process.env.PORT,
   () => console.log(`Server started on port ${process.env.PORT}`)
